@@ -1,0 +1,7 @@
+classes/
+generated/
+reports/
+resources/
+test-results/
+tmp/
+bootJarMainClassName

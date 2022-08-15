@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>246</x>
+      <y>840</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ProductManager
+--
++ ProductManager()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>966</y>
+      <w>186</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>Product
+--
+- id : int
+- name : string
+- costPrice : decimal
+- sellingPrice : decimal
+- instock : int
+- maxCapacity : int
+- threshold : int
+- sold : int
+- size : decimal
+--
++ Product()
++ RestockProduct() : void
++ SellProduct() : bool
++ EditProduct(name : string, costPrice : decimal, sellingPrice : decimal, maxCapacity : int, threshold : int, size : decimal) : void
++ ToString() : string
++ ProductOutOfStock : OutOfStockHandle
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>840</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>RequestManager
+--
++ RequestManager()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>966</y>
+      <w>186</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>RestockRequest
+--
+- id : int
+- requestedAmount : int
+- sentTime : dateTime
+--
++ RestockRequest()
++ GetProduct() : Product
++ GetId() : int
++ GetAmount() : int
++ GetTime() : string
++ ToString() : string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>888</y>
+      <w>54</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=0..n\n- products
+
+
+
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>996</y>
+      <w>162</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1 product</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>702</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IBasicFunctions&lt;T&gt;
+--
++ Add(obj: T) : bool
++ Remove(obj: T) : bool
++ Get(id : int) : T
++ GetAll() : T[ ]
++ LoadObjects() : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>762</y>
+      <w>318</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;180.0;510.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>780</y>
+      <w>66</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>618</x>
+      <y>888</y>
+      <w>54</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=0..n\n- requests
+
+
+
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>1122</y>
+      <w>138</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;delegate&gt;&gt;
+OutOfStockHandle
+--
+- product : Product
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>1122</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>840</y>
+      <w>222</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>UserManager
+--
++ UserManager()
++ LoginCheck(username : string, password : string) : int
++ GetActiveEmployees() : Employee[ ]
++ GetAllEmployees() : Employee[ ]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>912</y>
+      <w>42</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=0..n\n- users
+
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>966</y>
+      <w>222</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>/User/
+--
+- username : string
+- password : string
+--
++ User(username : string, password : string)
++ CheckDetails(username: string, password: string) : bool
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>1164</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Manager
+--
++ Manager()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>1122</y>
+      <w>414</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;670.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>1062</y>
+      <w>18</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>1164</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Administrator
+--
++ Administrator()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>1164</y>
+      <w>162</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+- firstName : string
+- lastName : string
+- email : string
+- gender : Gender
+- dateOfFirstWokingDay : string
+- dateOfLastWorkingDay : string
+- birthDate : string
+- contractType : EmployeeContractType
+- id : int
+- hourlyWage : double
+- hoursPerWeek : int
+- departureReason : string
+- shiftsPerWeek : int
+--
++ Employee()
++ EditDetails() : void
++ TerminateContract(reason : string, lastDay : DateTime) : bool
++ MinusHours() : void
++ GetInfo() : string	
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1212</x>
+      <y>1206</y>
+      <w>114</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+EmployeeContractType
+--
+FullTime
+PartTime
+ZeroHours
+Terminated
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1146</x>
+      <y>1236</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1146</x>
+      <y>1296</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1212</x>
+      <y>1290</y>
+      <w>114</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+Gender
+--
+Male
+Female
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>942</x>
+      <y>1962</y>
+      <w>114</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+WorkShiftType
+--
+Morning
+Afternoon
+Night
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>1998</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1074</x>
+      <y>816</y>
+      <w>204</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ShiftManager
+--
++ ShiftManager()
++ GetCancelledShifts() : WorkShift[ ]
++ TerminateEmployeesContract(e : Employee) : void
++ AutomaticAssignment(employees : Employee[ ]) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1152</x>
+      <y>900</y>
+      <w>42</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=0..n\n- shifts
+
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1074</x>
+      <y>954</y>
+      <w>162</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>WorkShift
+--
+- employee_id : int
+- type : WorkShiftType
+- date : DateTime
+- active : bool
+--
++ WorkShift()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>1128</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>1128</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1032</x>
+      <y>1404</y>
+      <w>96</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Adress
+--
+- country : string
+- town : string
+- streetName : string
+- streetNumber : int
+- zipCode : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1074</x>
+      <y>1362</y>
+      <w>24</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=1
+
+</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>780</y>
+      <w>66</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>756</y>
+      <w>300</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>480.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>654</y>
+      <w>324</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ -productManager
+
+</panel_attributes>
+    <additional_attributes>10.0;310.0;520.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>600</y>
+      <w>174</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>ApplicationManager
+--
++ GetProductManager() : ProductManager
++ GetRequestManager() : RequestManager
++ GetUserManager() : UserManager
++ GetShiftManager() : ShiftManager
++ GetDepartmentManager() : DepartmentManager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>678</y>
+      <w>90</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= -requestManager
+
+</panel_attributes>
+    <additional_attributes>10.0;270.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>678</y>
+      <w>138</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= -userManager
+
+</panel_attributes>
+    <additional_attributes>130.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>654</y>
+      <w>312</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ -shiftManager
+
+</panel_attributes>
+    <additional_attributes>500.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>408</y>
+      <w>240</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>/DataAccess/
+--
+# connection : MySqlConnection
+# command : MySqlCommand
+# dataReader : MySqlDataReader
+# query : string
+--
++ DataAccess()
++ AddWithValue(parameterName : string, value : object) : void
++ NonQueryEx() : void
++ Close() : void
++ ConnOpen() : bool
++ SqlQuery() : void
+
+
+
+
+
+
+ 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>222</y>
+      <w>222</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>EmployeeMediator
+--
++ EmployeeMediator()
++ TerminateContract(e : Employee) : bool
++ GetAvailableEmployees(weekday : string) : Employee[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>222</y>
+      <w>132</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>AdminMediator
+--
++ AdminMeditor() </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>222</y>
+      <w>132</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ManagerMediator
+--
++ ManagerMediator()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>186</x>
+      <y>222</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ShiftMediator
+--
++ ShiftMediator() 
++ CancelShift(w : WorkShift) : bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>0</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IBasicDatabaseFunctions&lt;T&gt;
+--
++ Add(obj : T) : bool
++ Remove(obj : T) : bool
++ GetAll() : T[ ]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>66</y>
+      <w>306</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>490.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>36</y>
+      <w>468</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>760.0;310.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>102</x>
+      <y>36</y>
+      <w>654</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;310.0;1070.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>222</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ProductMediator
+--
+ProductMediator()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>60</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IUpdateFunction&lt;T&gt;
+--
++ UpdateObject(obj : T) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>222</y>
+      <w>144</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RestockRequestMediator
+--
++ RestockRequestMediator()
++ AcceptRequest(RestockRequest r) : bool
++ RejectRequest(RestockRequest r) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>66</y>
+      <w>156</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>240.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>66</y>
+      <w>306</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;260.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>66</y>
+      <w>456</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;260.0;740.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>276</y>
+      <w>18</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>348</y>
+      <w>1260</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;2080.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>276</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>276</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>942</x>
+      <y>270</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>276</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>276</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>318</x>
+      <y>90</y>
+      <w>156</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>240.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>258</x>
+      <y>108</y>
+      <w>18</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>90</y>
+      <w>144</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;220.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>534</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1332</x>
+      <y>954</y>
+      <w>174</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Department
+--
+- id : int
+- name: string
+- manager_id : int
+--
++ Department()
++ AssignEmployee(e : Employee) : bool
++ RemoveEmployee(e : Employee) : bool
++ EditInfo() : void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1332</x>
+      <y>786</y>
+      <w>162</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>DepartmentManager
+--
++ DepartmentManager() 
++ GetDepartmentIndex(id : int) : int
++ CheckAlreadyManager(id : int) : bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1146</x>
+      <y>1038</y>
+      <w>198</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>- manager
+lt=&lt;-
+- employees
+
+m1=1..n
+
+
+</panel_attributes>
+    <additional_attributes>10.0;250.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>732</y>
+      <w>558</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>910.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>630</y>
+      <w>600</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ -shiftManager
+
+</panel_attributes>
+    <additional_attributes>980.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1416</x>
+      <y>846</y>
+      <w>66</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;-
+m1=0..n\n- departments
+
+</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>552</y>
+      <w>288</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Scheduler
+--
+
+--
++ CheckNumberOfAssignedEmployees(date : string, type : string) : int
++ GetAssignedEmployeesToShift(date : string, type : string) : WorkShift [ ] 
++ GetAvailableEmployees(weekDay : string, date : string, monday : string, sunday : string, night : bool) : Employee [ ]
++ CheckEmployeesShiftsForToday(employeeID : int, date : string) : bool
++ MaximumShifts(e : Employee, monday : string, sunday : string) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1164</x>
+      <y>636</y>
+      <w>72</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ -shiftManager
+
+</panel_attributes>
+    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1356</x>
+      <y>552</y>
+      <w>288</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>AutoScheduler
+--
+
+--
++ CheckWeekDatesInThePast(weekDates : string [ ]) : string [ ]
++ ScheduleAutomatically(weekDates : string [ ]) : void
++ MaximumShifts(e : Employee, monday : string, sunday : string) : bool
++ RemoveShiftsForCurrentWeek(modayDate : string, sundayDate : string) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1224</x>
+      <y>630</y>
+      <w>288</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ -shiftManager
+
+</panel_attributes>
+    <additional_attributes>10.0;310.0;460.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>606</y>
+      <w>144</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DataEncryptor
+--
+
+--
++ DataEncryptor()
++ Encrypt(plainText : string) : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>630</y>
+      <w>192</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= -dataEncryptor
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>222</y>
+      <w>162</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DepartmentMediator
+--
++ DepartmentMediator() 
++ Update(d : Department, managerID : int, departmentName : string) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>276</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>66</y>
+      <w>78</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;260.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDA1CA89-9BA5-408D-9554-F4299B60B78B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectStudentHousing</RootNamespace>
+    <AssemblyName>ProjectStudentHousing</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEventForm.Designer.cs">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Agreement.cs" />
+    <Compile Include="Complain.cs" />
+    <Compile Include="ComplainsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplainsForm.Designer.cs">
+      <DependentUpon>ComplainsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs" />
+    <Compile Include="fmAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmAgr.Designer.cs">
+      <DependentUpon>fmAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRules.Designer.cs">
+      <DependentUpon>fmRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmEvents.Designer.cs">
+      <DependentUpon>fmEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmComplaints.Designer.cs">
+      <DependentUpon>fmComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rule.cs" />
+    <Compile Include="RulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RulesForm.Designer.cs">
+      <DependentUpon>RulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suggestion.cs" />
+    <Compile Include="TenantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantForm.Designer.cs">
+      <DependentUpon>TenantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="House.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tenant.cs" />
+    <Compile Include="TenantsManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantsManagerForm.Designer.cs">
+      <DependentUpon>TenantsManagerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEventForm.resx">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplainsForm.resx">
+      <DependentUpon>ComplainsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmAgr.resx">
+      <DependentUpon>fmAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmEvents.resx">
+      <DependentUpon>fmEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmComplaints.resx">
+      <DependentUpon>fmComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRules.resx">
+      <DependentUpon>fmRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RulesForm.resx">
+      <DependentUpon>RulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantForm.resx">
+      <DependentUpon>TenantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantsManagerForm.resx">
+      <DependentUpon>TenantsManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Logo.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

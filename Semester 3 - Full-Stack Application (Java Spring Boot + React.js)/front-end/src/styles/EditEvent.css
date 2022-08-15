@@ -1,0 +1,39 @@
+.editEvent-container {
+    box-shadow: 0px 0px 9px 1px #0000004f;
+    max-width: 500px;
+    height: 530px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.editEvent-button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: limegreen !important;
+}
+
+.deleteEvent-button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: red !important;
+}
+
+.cancel-edit-button{
+    margin-left: 300px;
+    padding-top: 9px !important;
+    margin-top: 25px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px !important;
+    border: grey !important;
+}
+
+.cancel-edit-button:hover, .editEvent-button:hover, .deleteEvent-button:hover{
+    color: black !important;
+}
+
+.spacer-editEvent{
+    padding-top: 20px;
+}
+

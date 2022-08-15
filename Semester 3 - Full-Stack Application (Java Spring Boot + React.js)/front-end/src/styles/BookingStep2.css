@@ -1,0 +1,54 @@
+.booking-step-2-content-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-map{
+    width: 540px;
+    margin-left: 25px;
+}
+
+.blocks-container{
+    width: 400px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+
+.blockTable-container{
+    font-family: sans-serif;
+    font-size: 18px !important;
+}
+
+.select-block-button {
+    background-color: limegreen !important;
+    border: limegreen !important;
+    width: 60px !important;
+    height: 38px !important;
+    font-size: 30px !important;
+    line-height: 1px !important;
+}
+
+.select-block-button:hover{
+    color: black !important;
+}
+
+.step2-contact-info-container{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.category-availability-container{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ticket-quantity-container{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.col-lg-6 {
+    flex: 0 0 auto !important;
+    width: 35% !important;
+}

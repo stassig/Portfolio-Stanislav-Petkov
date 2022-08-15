@@ -1,0 +1,52 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3'
+
+#Define services
+services:
+
+  #PostgreSQL database for the application
+  database:
+    image: "postgres"
+    container_name: database
+    #Volume mounted for database for the storage
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 # Forward the exposed port 5432 on the container to port 5432 on the host machine
+
+    #Environment variable for DB name, user and password
+    environment:
+      - POSTGRES_DB=eTicketsDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+
+  #Back-end Spring Boot Application
+  backend:
+    #The docker file in backend build the jar and provides the docker image with the following name.
+    build: ./back-end
+    container_name: backend
+
+    #Environment variables for Spring Boot Application.
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://database:5432/eTicketsDB
+      - DB_SERVER=eTicketsDB
+      - POSTGRES_DB=eTicketsDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    links:
+      - database
+
+  #Front-end React Application
+  frontend:
+    build: ./front-end
+    container_name: frontend
+    ports:
+      - 3000:3000
+    links:
+      - backend
+
+#Volumes for DB data
+volumes:
+  pg-data:

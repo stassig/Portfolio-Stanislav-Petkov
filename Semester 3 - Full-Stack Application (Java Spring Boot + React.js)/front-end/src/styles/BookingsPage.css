@@ -1,0 +1,83 @@
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}
+
+.bookings-title{
+    text-align: left;
+    font-size: 38px;
+    margin-left: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ticket-container{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 10px;
+    height: 260px;
+    border-radius: 25px;
+}
+
+.booking-details-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 750px;
+    font-size: 17px;
+}
+
+.event-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 100%;
+    gap: 10px;
+}
+
+.team-logos-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+}
+
+.img-team-booking{
+    border-radius: 50%;
+    margin-inline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 125px;
+    height: 120px;
+}
+
+.vs-tag-booking{
+    margin-top: 45px;
+    font-size: 30px;
+}
+
+.booking-stadium{
+    font-size: 18px;
+}
+
+.booking-league-name{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.booking-page-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-container{
+    margin-left: 20px;
+    margin-top: 20px;
+}

@@ -1,0 +1,14 @@
+.match-list {
+    display:grid;
+    background-color:white;
+}
+
+.match-block {
+    background-color:whitesmoke;
+    margin: 10px;
+    min-height:40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 1px #0000004f;
+    display: grid;
+    align-content: center;
+}

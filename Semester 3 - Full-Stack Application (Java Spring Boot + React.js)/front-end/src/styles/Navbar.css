@@ -1,0 +1,47 @@
+
+.nav-link{
+    font-size: 25px;
+    color: white !important;
+}
+
+.mr-auto{
+    position: relative;
+    margin-left: auto;
+    margin-right: 5vh;
+    text-align: center;
+}
+
+img {
+    border-radius: 5%;
+    margin-inline: 0px;
+}
+
+img.img-logo {
+    width: 75px;
+    margin-left: 10px;
+}
+
+.color-nav {
+    --bs-bg-opacity: 1;
+    background-color: #D8082C;
+}
+
+.info-container{
+    color: black !important;
+    font-size: 20px !important;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+
+.link-nav{
+    color: white;
+    font-size: 25px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.link-nav:hover{
+    color: black;
+}

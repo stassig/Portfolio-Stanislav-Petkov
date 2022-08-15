@@ -1,0 +1,68 @@
+.spacer-addEvent {
+    padding-inline: 20px;
+}
+
+.addEvent-container {
+    box-shadow: 0px 0px 9px 1px #0000004f;
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 3%;
+}
+
+h2.title{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+input.addEvent-input {
+    margin: 0 auto;
+    float: none;
+}
+
+.addEvent-button{
+    margin-top: 20px;
+    width: 300px;
+    background-color: limegreen !important;
+}
+
+.addTeam-1-button{
+    margin-top: 30px;
+    margin-right: 130px;
+    width: 200px;
+    height: 50px;
+    background-color: deepskyblue !important;
+    font-size: 20px !important;
+    padding-top: 9px !important;
+
+}
+
+.btn-info{
+    color: white !important;
+}
+
+/*height: 80px;*/
+/*background-color: dodgerblue !important;*/
+/*font-size: 25px !important;*/
+/*margin-left: 20px;*/
+
+
+.cancel-button{
+    padding-top: 9px !important;
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px !important;
+    background-color: grey !important;
+    border: grey !important;
+}
+
+.cancel-button:hover, .addEvent-button:hover, .addTeam-1-button:hover{
+    color: black !important;
+}
+
+.btn-info:hover{
+    color: black !important;
+}

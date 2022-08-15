@@ -1,0 +1,6 @@
+projectKey=I461415_individualprojectstanislavpetkovs3_AXxvm_heZCqhUXf-tdjG
+serverUrl=http://localhost:9000
+serverVersion=9.1.0.47736
+dashboardUrl=http://localhost:9000/dashboard?id=I461415_individualprojectstanislavpetkovs3_AXxvm_heZCqhUXf-tdjG
+ceTaskId=AX5vVWE_HoVH-_eOO9bQ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX5vVWE_HoVH-_eOO9bQ

@@ -1,0 +1,106 @@
+.booking-step-1-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-step-1-title{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.main-title-container{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.sub-title-container, .booking-time-details{
+    font-size: 25px;
+}
+
+.booking-step-1-content-container{
+    display: flex;
+}
+
+.img-map{
+    width: 540px;
+    margin-left: 25px;
+}
+
+.category-header{
+    display: flex;
+    border: 3px solid;
+    border-top-color: black;
+    border-bottom-color: slategrey !important;
+    border-bottom: 2px solid;
+    margin-left: 70px;
+    width: 850px;
+}
+
+.category-name-header{
+    padding-left: 35px;
+}
+
+.category-quantity-header{
+    padding-left: 405px;
+}
+
+.category-price-header{
+    padding-left: 45px;
+}
+
+.category-name-header, .category-quantity-header, .category-price-header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.category{
+    display: flex;
+    border: 3px solid;
+    border-top: 1px;
+    border-bottom-color: slategrey !important;
+    border-bottom: 2px solid;
+    margin-left: 70px;
+    width: 850px;
+    height: 55px;
+}
+
+.category-name{
+    text-align: left;
+    padding-left: 30px;
+    width: 460px;
+}
+
+.category-main-name{
+    font-weight: bold;
+}
+
+.quantity-selector{
+    margin-left: 60px;
+    margin-top: 6px;
+    padding-left: 20px;
+    height: 40px;
+}
+
+.price-container{
+    padding-left: 47px;
+    padding-top: 15px;
+    font-weight: bold;
+    color: dimgrey;
+    width: 115px;
+}
+
+.buy-now-button{
+    margin-left: 40px;
+    width: 110px;
+    height: 45px;
+    margin-top: 3px;
+    font-size: 20px !important;
+    background-color: limegreen !important;
+    border: limegreen !important;
+}
+
+.buy-now-button:hover{
+    color: black !important;
+}
+

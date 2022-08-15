@@ -1,0 +1,27 @@
+.chat-body{
+    height: 450px;
+    border: 1px solid black;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+.chat-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.message-container{
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.message-input-field{
+    margin-top: 20px;
+}
+
+.send-button{
+    margin-top: 15px;
+    height: 48px;
+    font-size: 22px;
+    width: 200px;
+}

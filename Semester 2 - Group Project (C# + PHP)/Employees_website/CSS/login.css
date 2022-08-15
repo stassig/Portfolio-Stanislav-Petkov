@@ -1,0 +1,34 @@
+.infoLogin{
+    height: 700px;
+}
+
+
+.bodylog{
+    max-width:200px;
+    margin: auto;
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 5px;
+    height: 400px;
+    
+}
+
+
+
+.ca{
+    font-size: 15px;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+.ca:hover{
+    opacity: .7;
+}
